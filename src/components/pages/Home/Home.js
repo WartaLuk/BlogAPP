@@ -1,6 +1,11 @@
+import Posts from "../Post/Post";
+import { Container } from "react-dom";
+
 const Home = () => {
     return (
-        <>Home</>
+        <Container>
+            <Posts/>
+        </Container>
     );
 };
 
