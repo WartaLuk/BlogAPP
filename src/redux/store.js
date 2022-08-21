@@ -12,5 +12,6 @@ const store = createStore(
   initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
+console.log(initialState);
 
 export default store;
