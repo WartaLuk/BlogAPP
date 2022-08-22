@@ -1,5 +1,5 @@
 import Posts from "../Post/Post";
-import { Container } from "react-dom";
+import { Container } from "react-bootstrap";
 
 const Home = () => {
     return (

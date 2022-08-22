@@ -12,12 +12,16 @@ const Posts = () => {
           <Col key={post.id}>
             <Card.Body>
               <Card.Title>
-                <h1>Title:</h1>
-                {post.title}
+                <Row>
+                  <h1>Title:</h1>
+                  {post.title}
+                </Row>
               </Card.Title>
               <Card.Subtitle>
-                <h3>Author:</h3>
-                {post.author}
+                <Row>
+                  <h3>Author:</h3>
+                  {post.author}
+                </Row>
               </Card.Subtitle>
               <Card.Text>{post.text}</Card.Text>
             </Card.Body>

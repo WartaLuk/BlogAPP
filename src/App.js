@@ -1,6 +1,5 @@
-'use strict'
 import {Routes, Route } from "react-router-dom";
-import Container from "react-bootstrap/esm/Container";
+import { Container } from "react-bootstrap";
 import NavBar from "./components/views/NavBar/NavBar";
 import Home from "./components/pages/Home/Home";
 import About from "./components/pages/About/About";

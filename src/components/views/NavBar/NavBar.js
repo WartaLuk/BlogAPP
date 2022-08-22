@@ -1,37 +1,30 @@
-import { Container, Nav } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
-import styles from "./NavBar.module.scss";
 
 const NavBar = () => {
   return (
-    <Nav bg="primary" variant="dark" expand="lg" className="mt-4 mb-4 rounded">
+    <Navbar sticky="top" variant="light" bg="primary">
       <Container>
         <>
-          <ul>
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? StyleSheet.linkActive : undefined
-                }
-                to="/"
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? StyleSheet.linkActive : undefined
-                }
-                to="/about"
-              >
-                About
-              </NavLink>
-            </li>
-          </ul>
+          <Nav className="justify-content-end">
+            <Nav.Link
+              as={NavLink}
+              to="/"
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              to="/about"
+            >
+              About
+            </Nav.Link>
+          </Nav>
         </>
       </Container>
-    </Nav>
+    </Navbar>
   );
 };
 
