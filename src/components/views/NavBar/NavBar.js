@@ -5,10 +5,15 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <Navbar sticky="top" variant="light" bg="primary">
+    // variant ???
+    <Navbar sticky="top" bg="primary" variant="dark"
+     expand="lg" className="me-auto mt-4 mb-4 rounded">
       <Container>
         <>
-          <Nav className="justify-content-end">
+        <h3 className="text-light">
+              BLOG.app
+            </h3>
+          <Nav>
             <Nav.Link
               as={NavLink}
               to="/"

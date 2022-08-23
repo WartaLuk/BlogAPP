@@ -1,4 +1,5 @@
-import { Card, Row, Col } from "react-bootstrap";
+import styles from "./Post.module.scss"
+import {Col, Row, Card, Button} from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { getAllPosts } from "../../../redux/postsRedux";
 
@@ -7,23 +8,18 @@ const Posts = () => {
 
   return (
     <section>
-      <Row className="justify-content-md-center">
+      <Row className="justify-content-md-center" xs={1} md={2} lg={3} xl={4}>
         {postsData.map((post) => (
           <Col key={post.id}>
-            <Card.Body>
+            <Card.Body>  
               <Card.Title>
-                <Row>
-                  <h1>Title:</h1>
-                  {post.title}
-                </Row>
+                <h5>Title: {post.title}</h5>
               </Card.Title>
               <Card.Subtitle>
-                <Row>
-                  <h3>Author:</h3>
-                  {post.author}
-                </Row>
+                <h6>Author: {post.author}</h6>
               </Card.Subtitle>
-              <Card.Text>{post.text}</Card.Text>
+              <Card.Text className="abstract">{post.abstract}</Card.Text>
+              <Button href={`/post/${post.id}`}>Read more</Button>
             </Card.Body>
           </Col>
         ))}
