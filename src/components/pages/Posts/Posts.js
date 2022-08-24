@@ -1,6 +1,7 @@
 import {Col, Row, Card, Button} from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { getAllPosts } from "../../../redux/postsRedux";
+import { Link } from "react-router-dom";
 
 const Posts = () => {
   const postsData = useSelector(getAllPosts);
@@ -17,8 +18,8 @@ const Posts = () => {
               <Card.Subtitle>
                 <h6>Author: {post.author}</h6>
               </Card.Subtitle>
-              <Card.Text className="abstract">{post.abstract}</Card.Text>
-              <Button href={`/post/${post.id}`}>Read more</Button>
+              <Card.Text>{post.abstract}</Card.Text>
+              <Button as={Link} to={`/post/${post.id}`}>Read more</Button>
             </Card.Body>
           </Col>
         ))}

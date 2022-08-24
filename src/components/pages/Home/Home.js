@@ -1,4 +1,4 @@
-import Posts from "../Post/Post";
+import Posts from "../Posts/Posts";
 import { Container } from "react-bootstrap";
 
 const Home = () => {
