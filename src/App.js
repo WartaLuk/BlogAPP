@@ -11,22 +11,24 @@ import Footer from "./components/views/Footer/Footer";
 
 const App = () => {
   return (
-    <main className="min-vh-100">
-      <Header/>
-      <Container>
-        <>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/post/:postId" element={<Post/>}/>
-          <Route path="/post/add" element={<PostAdd/>}/>
-          <Route path="/post/edit/:postId" element={<PostEdit/>}/>
-          <Route path="/about/" element={<About/>}/>
-          <Route path="*" element={<PageNotFound/>}/>
-        </Routes>
-        </>
-      </Container>
+    <>
+      <main className="min-vh-100">
+        <Header/>
+        <Container>
+          <>
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/post/:postId" element={<Post/>}/>
+            <Route path="/post/add" element={<PostAdd/>}/>
+            <Route path="/post/edit/:postId" element={<PostEdit/>}/>
+            <Route path="/about/" element={<About/>}/>
+            <Route path="*" element={<PageNotFound/>}/>
+          </Routes>
+          </>
+        </Container>
+      </main>
       <Footer/>
-    </main>
+    </>
   );
 };
 
