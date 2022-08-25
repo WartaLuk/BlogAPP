@@ -40,7 +40,7 @@ const Post = () => {
             <Button variant="secondary" onClick={() => setShow(false)}>
               Cancel
             </Button>
-            <Button variant="primary" onClick={() => setShow(true)}>
+            <Button variant="primary" onClick={(handleRemove)}>
              Remove
             </Button>
           </Modal.Footer>
