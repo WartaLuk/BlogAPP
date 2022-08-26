@@ -8,6 +8,14 @@ const Posts = () => {
 
   return (
     <section>
+      <Row>
+        <Col>
+          <h2 className="mb-5">All post</h2>
+        </Col>
+        <Col className="d-flex justify-content-end p-3">
+          <Button as={Link} to={`/post/add`}>Add post</Button>
+        </Col>
+      </Row>
       <Row className="justify-content-md-center" xs={1} md={2} lg={3} xl={4}>
         {postsData.map((post) => (
           <Col key={post.id}>

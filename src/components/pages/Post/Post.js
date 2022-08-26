@@ -1,4 +1,4 @@
-import { Card, Button, Modal } from "react-bootstrap";
+import { Card, Button, Modal, Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { getPostById, removePost } from "../../../redux/postsRedux";
 import { useParams, Navigate } from "react-router";
@@ -19,7 +19,7 @@ const Post = () => {
   if (!post) return <Navigate to="/" />;
   else
     return (
-      <section>
+      <Container>
         <Card.Body>
           <Card.Title>
             <h5>Title: {post.title}</h5>
@@ -45,7 +45,7 @@ const Post = () => {
             </Button>
           </Modal.Footer>
         </Modal>
-      </section>
+      </Container>
     );
 };
 export default Post;
