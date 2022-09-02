@@ -20,7 +20,7 @@ const postsReducer = (statePart = [], action) => {
     case REMOVE_POST:
       return statePart.filter((post) => post.id !== action.payload);
     case EDIT_POST:
-      return statePart.map((post) => post.id === action.payload.id ? {...post, ...action.payload}: post)
+      return statePart.map((post) => post.id == action.payload.id ? {...post, ...action.payload}: post)
     default:
       return statePart;
   };
