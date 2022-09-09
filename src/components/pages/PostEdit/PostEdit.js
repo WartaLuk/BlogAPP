@@ -7,7 +7,7 @@ const PostEdit = () => {
   const {postId} = useParams();
   const post = useSelector(state => getPostById(state, postId));
     return (
-        <PostEditForm post={post}/>
+        <PostEditForm postData={post}/>
     );
 };
 

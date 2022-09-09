@@ -1,20 +1,24 @@
-import { Button } from "bootstrap";
 import { useState } from "react";
-import { Col, Form, Row } from "react-bootstrap";
+import { Col, Form, Row, Button } from "react-bootstrap";
 import { editPost, addPost } from "../../redux/postsRedux";
 
 const PostForm = ({ pageTitle, post, handleSubmit }) => {
-  const [title, setTitle] = useState(post.title || "");
-  const [author, setAuthor] = useState(post.author || "");
-  const [text, setText] = useState(post.text || "");
-  const [abstract, setAbstract] = useState(post.abstract || "");
-  const [publishedDate, setPublishedDate] = useState(post.publishedDate || "");
+  const [title, setTitle] = useState(post?.title || "");
+  const [author, setAuthor] = useState(post?.author || "");
+  const [text, setText] = useState(post?.text || "");
+  const [abstract, setAbstract] = useState(post?.abstract || "");
+  const [publishedDate, setPublishedDate] = useState(post?.publishedDate || "");
+
+  const handleSubmitProvider = (e) => {
+    e.preventDefault();
+    handleSubmit({title, author, text, abstract, publishedDate});
+  }
 
   return (
     <Row>
       <Col>
         <h2>{pageTitle}</h2>
-        <Form>
+        <Form onSubmit={handleSubmitProvider}>
           <Form.Group className="mb-3">
             <Form.Label>Title</Form.Label>
             <Form.Control
@@ -36,6 +40,7 @@ const PostForm = ({ pageTitle, post, handleSubmit }) => {
           <Form.Group className="mb-3">
             <Form.Label>Text</Form.Label>
             <Form.Control
+              as="textarea"
               value={text}
               type="text"
               placeholder="Enter article text"
@@ -45,6 +50,7 @@ const PostForm = ({ pageTitle, post, handleSubmit }) => {
           <Form.Group className="mb-3">
             <Form.Label>Abstact</Form.Label>
             <Form.Control
+              as="textarea"
               value={abstract}
               type="text"
               placeholder="Enter article abstract"
@@ -60,7 +66,7 @@ const PostForm = ({ pageTitle, post, handleSubmit }) => {
               onChange={(e) => setPublishedDate(e.target.value)}
             />
           </Form.Group>
-          <Button variant="primary" type="submit" onClick={handleSubmit}>
+          <Button variant="primary" type="submit">
             Submit
           </Button>
         </Form>

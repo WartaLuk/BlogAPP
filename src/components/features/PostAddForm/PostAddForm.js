@@ -5,10 +5,16 @@ import { addPost } from "../../../redux/postsRedux";
 import PostForm from "../../common/PostForm";
 
 const AddPostForm = () => {
+    const pageTitle = "Add post";
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    const handleSubmit = (post) => {
+        dispatch(addPost(post));
+        navigate("/");
+    };
 return (
-    <PostForm/>
+    <PostForm handleSubmit={handleSubmit} pageTitle={pageTitle}/>
 );
 };
 
