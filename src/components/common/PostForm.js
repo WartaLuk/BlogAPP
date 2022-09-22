@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Col, Form, Row, Button } from "react-bootstrap";
-import { editPost, addPost } from "../../redux/postsRedux";
 
 const PostForm = ({ pageTitle, post, handleSubmit }) => {
   const [title, setTitle] = useState(post?.title || "");
