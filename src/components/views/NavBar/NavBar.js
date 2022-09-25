@@ -20,6 +20,7 @@ const NavBar = () => {
             >
               Home
             </Nav.Link>
+            <Nav.Link as={NavLink} to="/categories">Categories</Nav.Link>
             <Nav.Link
               as={NavLink}
               to="/about"

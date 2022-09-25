@@ -27,7 +27,16 @@ const Post = () => {
           <Card.Subtitle>
             <h6>Author: {post.author}</h6>
           </Card.Subtitle>
-          <Card.Text>{post.text}</Card.Text>
+          <Card.Subtitle>
+            <h6>Abstract: {post.abstract}</h6>
+          </Card.Subtitle>
+          <Card.Subtitle>
+            <h6>Published: {post.publishedDate}</h6>
+          </Card.Subtitle>
+          <Card.Subtitle>
+            <h6>Category: {post.category}</h6>
+          </Card.Subtitle>
+          <Card.Text dangerouslySetInnerHTML={{ __html: post.text }}/>
         </Card.Body>
         <Button className="m-3" as={Link} to={`/post/edit/${postId}`}>Edit</Button>
         <Button className="m-3" onClick={() => setShow(true)}>Delete</Button>
