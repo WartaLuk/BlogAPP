@@ -34,6 +34,7 @@ const PostForm = ({ pageTitle, post, handleSubmit }) => {
     } else {
       handleSubmit({ title, author, text, abstract, publishedDate, category });
     }
+    console.log(handleSubmit);
   };
 
   return (
