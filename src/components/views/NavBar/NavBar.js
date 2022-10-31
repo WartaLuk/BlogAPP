@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    // variant ???
     <Navbar sticky="top" bg="primary" variant="dark"
      expand="lg" className="me-auto mt-4 mb-4 rounded">
       <Container>
