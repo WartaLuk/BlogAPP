@@ -9,7 +9,7 @@ import PostEdit from "./components/pages/PostEdit/PostEdit";
 import Header from "./components/views/Header/Header";
 import Footer from "./components/views/Footer/Footer";
 import Categories from "./components/pages/Categories/Categories";
-
+import Category from "./components/pages/Category/Category";
 const App = () => {
   return (
     <>
