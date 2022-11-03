@@ -27,7 +27,7 @@ const PostForm = ({ pageTitle, post, handleSubmit }) => {
   const handleSubmitProvider = (e) => {
     setErrorDate(false);
     setErrorText(false);
-    if (!text) {
+    if (!text.replace(/(&nbsp;|<([^>]+)>)/ig, "").trim().length) {
       setErrorText(true);
     } else if (!publishedDate) {
       setErrorDate(true);
